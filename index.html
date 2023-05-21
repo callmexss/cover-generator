@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+
+  <div class="bg-white p-10 rounded-lg shadow-md">
+    <h2 class="text-2xl mb-5">Cover Generator</h2>
+    <form id="coverForm" class="space-y-4">
+
+      <!-- height and width -->
+      <div class="flex justify-between items-center">
+        <div class="w-1/2 pr-2">
+          <label for="width" class="block text-gray-700">Width:</label>
+          <input type="text" id="width" name="width" class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+        <div class="w-1/2 pr-2">
+          <label for="height" class="block text-gray-700">Height:</label>
+          <input type="text" id="height" name="height" class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+      </div>
+
+      <!-- title and title offset -->
+      <div class="flex justify-between items-center">
+        <div class="w-1/2 pr-2">
+          <label for="title" class="block text-gray-700">Title:</label>
+          <input type="text" id="title" name="title" class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+        <div class="w-1/2 pl-2">
+          <label for="titleOffset" class="block text-gray-700">Title Offset:</label>
+          <input type="text" id="titleOffset" name="titleOffset"
+            class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+      </div>
+
+      <!-- subtitle and subtitle offset -->
+      <div class="flex justify-between items-center">
+        <div class="w-1/2 pr-2">
+          <label for="subtitle" class="block text-gray-700">Subtitle:</label>
+          <input type="text" id="subtitle" name="subtitle"
+            class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+        <div class="w-1/2 pl-2">
+          <label for="subtitleOffset" class="block text-gray-700">Subtitle Offset:</label>
+          <input type="text" id="subtitleOffset" name="subtitleOffset"
+            class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+      </div>
+
+      <!-- author and author offset -->
+      <div class="flex justify-between items-center">
+        <div class="w-1/2 pr-2">
+          <label for="author" class="block text-gray-700">Author:</label>
+          <input type="text" id="author" name="author" class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+        <div class="w-1/2 pl-2">
+          <label for="authorOffset" class="block text-gray-700">Author Offset:</label>
+          <input type="text" id="authorOffset" name="authorOffset"
+            class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+      </div>
+
+      <!-- title_up and title_up offset -->
+      <div class="flex justify-between items-center">
+        <div class="w-1/2 pr-2">
+          <label for="titleUp" class="block text-gray-700">Title Up:</label>
+          <input type="text" id="titleUp" name="titleUp"
+            class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+        <div class="w-1/2 pl-2">
+          <label for="titleUpOffset" class="block text-gray-700">Title Up Offset:</label>
+          <input type="text" id="titleUpOffset" name="titleUpOffset"
+            class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+      </div>
+
+      <!-- title_down and title_down offset -->
+      <div class="flex justify-between items-center">
+        <div class="w-1/2 pr-2">
+          <label for="title_down" class="block text-gray-700">Title Down:</label>
+          <input type="text" id="title_down" name="title_down"
+            class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+        <div class="w-1/2 pl-2">
+          <label for="titleDownOffset" class="block text-gray-700">Title Down Offset:</label>
+          <input type="text" id="titleDownOffset" name="titleDownOffset"
+            class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+        </div>
+      </div>
+
+      <div>
+        <label for="fontSize" class="block text-gray-700">Font size:</label>
+        <input type="number" id="fontSize" name="fontSize" value="110"
+          class="block w-full mt-1 p-2 border border-gray-300 rounded-md">
+      </div>
+      <div>
+        <label for="startColor" class="block text-gray-700">Start color:</label>
+        <input type="color" id="startColor" name="startColor" value="#f64188" class="w-16 block">
+
+      </div>
+      <div>
+        <label for="endColor" class="block text-gray-700">End color:</label>
+        <input type="color" id="endColor" name="endColor" value="#f89c3e" class="w-16 block">
+      </div>
+      <div>
+        <input type="button" value="Generate Cover" onclick="generateCoverFromForm()"
+          class="block w-full mt-1 bg-blue-600 text-white rounded-md px-4 py-2">
+      </div>
+    </form>
+  </div>
+
+  <canvas id="myCanvas" width="1080" height="1440" class="mt-5" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.
+  </canvas>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
